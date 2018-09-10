@@ -1,0 +1,12 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import 'var/var';
+@import 'var/customvar';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'mixin/breakpoints';
+@import 'mixin/animation';
+@import 'abstracts/parallax';
+@import 'components/mainnav';
+@import 'components/hero';
+@import 'components/infobanners.scss';
+@import 'components/horizontalmenu';
+@import 'components/animationscss';

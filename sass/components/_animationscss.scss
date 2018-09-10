@@ -1,0 +1,15 @@
+//--slide animation -- //
+
+.element {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%{
+      transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-5px);
+    }
+    
+  }
