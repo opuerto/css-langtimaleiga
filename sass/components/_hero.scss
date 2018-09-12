@@ -9,6 +9,10 @@
   @include respond(md){
     min-height: 70vh;
   }
+
+  &--shrink {
+      min-height: 30vh !important;
+  }
   //element
   &__content {
     display: flex;
