@@ -7284,11 +7284,14 @@ a.text-dark:hover, a.text-dark:focus {
       .horizontal__menu__wrap .option__text {
         color: #999;
         font-size: 10px; }
+        .horizontal__menu__wrap .option__text a:visited, .horizontal__menu__wrap .option__text a:link, .horizontal__menu__wrap .option__text a:hover {
+          text-decoration: none;
+          color: inherit; }
         @media (min-width: 768px) {
           .horizontal__menu__wrap .option__text {
             font-size: 16px; } }
       .horizontal__menu__wrap .option:hover {
-        transform: translateY(-10px); }
+        color: #202125; }
         .horizontal__menu__wrap .option:hover .option__icon path {
           fill: #000; }
         .horizontal__menu__wrap .option:hover .option__text {
@@ -7312,6 +7315,9 @@ ul.horizontal__menu__wrap {
 .cars__grid {
   cursor: pointer;
   margin-top: 20px; }
+  .cars__grid a.link__tile:hover, .cars__grid a.link__tile:link, .cars__grid a.link__tile:visited {
+    text-decoration: none;
+    color: inherit; }
   .cars__grid .tile {
     transition: .3s all ease-in-out; }
     .cars__grid .tile:hover {
@@ -7351,6 +7357,7 @@ ul.horizontal__menu__wrap {
       height: 40px;
       font-family: "Work Sans", sans-serif; }
     .cars__grid .box__content {
+      position: relative;
       display: flex;
       flex-direction: column;
       background: #ececec;
@@ -7373,15 +7380,26 @@ ul.horizontal__menu__wrap {
         padding-left: 14px; }
       .cars__grid .box__content .price__now {
         padding-left: 14px; }
-      .cars__grid .box__content .button {
+      .cars__grid .box__content .button--tile {
+        position: absolute;
+        bottom: 0;
         width: 100%;
-        height: 100%;
+        height: 50px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding: 10px;
-        align-self: flex-end; }
-        .cars__grid .box__content .button a {
+        align-self: flex-end;
+        color: #333;
+        font-size: 18px;
+        background: #d0d0d0;
+        border-radius: 0;
+        transition: .3s all;
+        text-align: center; }
+        .cars__grid .box__content .button--tile:hover {
+          background: #a72204;
+          color: #fff; }
+        .cars__grid .box__content .button--tile a {
           color: #333;
           font-size: 18px;
           display: inline;
@@ -7389,10 +7407,14 @@ ul.horizontal__menu__wrap {
           width: 100%;
           border-radius: 0;
           transition: .3s all; }
-          .cars__grid .box__content .button a:hover {
+          .cars__grid .box__content .button--tile a:hover {
             background: #a72204;
             color: #fff; }
   .cars__grid .box--nomargin {
     margin-bottom: 0 !important; }
+
+.footer {
+  height: 400px;
+  background: #3c3c3b; }
 
 /*# sourceMappingURL=style.css.map */
