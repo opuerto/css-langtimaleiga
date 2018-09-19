@@ -7419,36 +7419,167 @@ ul.horizontal__menu__wrap {
 
 .product__form {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin: 30px 0; }
+  @media (min-width: 992px) {
+    .product__form {
+      height: 100vh;
+      justify-content: center; } }
   .product__form .form__container {
     height: 90%;
     width: 95%;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column-reverse;
     justify-content: flex-start;
     flex-wrap: nowrap;
     flex-shrink: 0; }
+    @media (min-width: 992px) {
+      .product__form .form__container {
+        flex-direction: row; } }
     .product__form .form__container .left {
       display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       background: #f4f4f4;
-      height: 100%; }
+      height: 900px; }
+      @media (min-width: 992px) {
+        .product__form .form__container .left {
+          height: 100%; } }
+      .product__form .form__container .left .wrapper {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column; }
+        .product__form .form__container .left .wrapper .row__12x4 {
+          display: flex;
+          width: 100%;
+          flex-direction: column; }
+          .product__form .form__container .left .wrapper .row__12x4:not(:last-child) {
+            margin-bottom: 20px; }
+          @media (min-width: 768px) {
+            .product__form .form__container .left .wrapper .row__12x4 {
+              flex-direction: row; } }
+          .product__form .form__container .left .wrapper .row__12x4 .input {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column; }
+            .product__form .form__container .left .wrapper .row__12x4 .input:not(:last-child) {
+              margin-bottom: 20px; }
+            @media (min-width: 768px) {
+              .product__form .form__container .left .wrapper .row__12x4 .input:not(:last-child) {
+                margin-right: 8px;
+                margin-bottom: 0; } }
+            .product__form .form__container .left .wrapper .row__12x4 .input .label {
+              color: #5e5e5e;
+              font-size: 16px;
+              font-family: "Work Sans", sans-serif;
+              font-weight: 300; }
+            .product__form .form__container .left .wrapper .row__12x4 .input .input__field {
+              font-size: 16px;
+              line-height: 46px;
+              box-sizing: border-box;
+              background: #dee2e6;
+              width: 100%;
+              height: 48px;
+              padding: 0 16px;
+              color: #444;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+              outline-color: #a72204; }
+            .product__form .form__container .left .wrapper .row__12x4 .input .select_input {
+              font-size: 16px;
+              line-height: 25px;
+              width: 100%;
+              height: 48px;
+              padding: 0 16px;
+              color: #5e5e5e;
+              border: 1px solid #ccc;
+              border-radius: 0;
+              background: #dee2e6;
+              outline-color: #a72204;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none; }
+            .product__form .form__container .left .wrapper .row__12x4 .input .input-textarea {
+              font-size: 16px;
+              line-height: 25px;
+              width: 100%;
+              height: 300px;
+              padding: 16px;
+              color: #5e5e5e;
+              border: 1px solid #ccc;
+              border-radius: 0;
+              background: #dee2e6;
+              outline-color: #a72204;
+              resize: none;
+              border-radius: 3px; }
+          .product__form .form__container .left .wrapper .row__12x4 .input--select {
+            position: relative; }
+          .product__form .form__container .left .wrapper .row__12x4 .select_arrow_down_2y6-P {
+            position: absolute;
+            top: 67%;
+            right: 20px;
+            width: 0;
+            height: 0;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            border-width: 7px 5px 0;
+            border-top: 8px solid #999;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent; }
+          .product__form .form__container .left .wrapper .row__12x4 .btn--orange {
+            background: #a72204;
+            color: #fff;
+            text-transform: uppercase;
+            width: 200px;
+            transition: all .3s; }
+            .product__form .form__container .left .wrapper .row__12x4 .btn--orange:hover {
+              background: #fff;
+              color: #a72204;
+              border: 1px solid #a72204; }
     .product__form .form__container .right {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      width: 100%; }
+      width: 100%;
+      height: 300px; }
+      @media (min-width: 992px) {
+        .product__form .form__container .right {
+          display: flex;
+          height: auto; } }
       .product__form .form__container .right__image {
         background-repeat: no-repeat !important;
         background-size: cover !important;
         background-position: center !important;
         background-image: linear-gradient(to right bottom, rgba(167, 34, 4, 0.8), rgba(184, 52, 0, 0.8)), url("/assets/tim-trad-190770.jpg");
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .product__form .form__container .right__image svg {
+          width: 100px;
+          height: 100px; }
+          @media (min-width: 992px) {
+            .product__form .form__container .right__image svg {
+              width: 150px;
+              height: 150px; } }
+        .product__form .form__container .right__image .car__title {
+          margin-top: 30px;
+          color: #fff;
+          font-family: "Work Sans", sans-serif; }
+          .product__form .form__container .right__image .car__title h1 {
+            font-size: 24px; }
+            @media (min-width: 992px) {
+              .product__form .form__container .right__image .car__title h1 {
+                font-size: 34px; } }
       .product__form .form__container .right__title {
         color: #fff;
         font-family: "Work Sans", sans-serif;

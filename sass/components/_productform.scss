@@ -1,22 +1,149 @@
 .product__form {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:30px 0;
+    @include respond(lg){
+        height: 100vh;
+        justify-content: center;
+    }
   .form__container {
       height: 90%;
       width: 95%;
       box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
       display: flex;
+      flex-direction: column-reverse;
       justify-content: flex-start;
       flex-wrap: nowrap;
       flex-shrink: 0;
+      @include respond(lg) {
+          flex-direction: row;
+      }
       .left {
         display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         background: $gray-color;
-        height: 100%;
+        height: 900px;
+        @include respond(lg){
+          height: 100%;
+        }
+        .wrapper {
+          width: 90%;
+          height: 90%;
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          .row__12x4 {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            &:not(:last-child){
+              margin-bottom: 20px;
+            }
+            @include respond(md) {
+              flex-direction: row;
+            }
+            .input {
+              display: flex;
+              flex-grow: 1;
+              flex-direction: column;
+              &:not(:last-child){
+                margin-bottom: 20px;
+              }
+              @include respond(md) {
+                &:not(:last-child){
+                  margin-right: 8px;
+                  margin-bottom: 0;
+                }
+              }
+              .label {
+                color: $gray-font;
+                font-size: 16px;
+                font-family: $google-font-titles;
+                font-weight: 300;
+              }
+              .input__field {
+                font-size: 16px;
+                line-height: 46px;
+                box-sizing: border-box;
+                background: $gray-300;
+                width: 100%;
+                height: 48px;
+                padding: 0 16px;
+                color: #444;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                //outline: none;
+                outline-color: $second-orange;
+
+              }
+              .select_input{
+                font-size: 16px;
+                line-height:25px;
+                width: 100%;
+                height: 48px;
+                padding: 0 16px;
+                color: #5e5e5e;
+                border: 1px solid #ccc;
+                border-radius: 0;
+                background: $gray-300;
+                outline-color: $second-orange;
+                -webkit-appearance: none;
+                -moz-appearance:none;
+                appearance:none;
+              }
+
+              .input-textarea {
+                font-size: 16px;
+                line-height:25px;
+                width: 100%;
+                height: 300px;
+                padding:16px;
+                color: #5e5e5e;
+                border: 1px solid #ccc;
+                border-radius: 0;
+                background: $gray-300;
+                outline-color: $second-orange;
+                resize: none;
+                border-radius: 3px;
+              }
+
+            }
+
+            .input--select {
+              position: relative;
+            }
+            .select_arrow_down_2y6-P {
+              position: absolute;
+              top: 67%;
+              right: 20px;
+              width: 0;
+              height: 0;
+              -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+              border-width: 7px 5px 0;
+              border-top: 8px solid #999;
+              border-right: 8px solid transparent;
+              border-left: 8px solid transparent;
+            }
+
+            .btn--orange {
+                background: $second-orange;
+                color: $white;
+                text-transform: uppercase;
+                width: 200px;
+                transition: all .3s;
+                &:hover {
+                  background: $white;
+                  color: $second-orange;
+                  border:1px solid $second-orange;
+                }
+              }
+          }
+        }
 
       }
       .right {
@@ -25,6 +152,11 @@
         justify-content: flex-start;
         align-items: center;
         width: 100%;
+        height: 300px;
+        @include respond(lg){
+          display: flex;
+          height: auto;
+        }
 
         &__image {
           background-repeat: no-repeat !important;
@@ -33,8 +165,29 @@
           background-image: linear-gradient(to right bottom, rgba($second-orange, 0.8),rgba($primary-bg, 0.8)),url('/assets/tim-trad-190770.jpg');
           width: 100%;
           height: 100%;
-
-
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+           svg {
+             width: 100px;
+             height: 100px;
+             @include respond(lg) {
+               width: 150px;
+               height: 150px;
+             }
+           }
+          .car__title {
+              margin-top: 30px;
+              color:$white;
+              font-family: $google-font-titles;
+              h1 {
+                font-size: 24px;
+                @include respond(lg) {
+                font-size: 34px;
+                }
+              }
+          }
         }
 
         &__title {
