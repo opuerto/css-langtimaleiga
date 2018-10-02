@@ -20,7 +20,7 @@
 .navigation__logo {
   display: inline-flex;
   justify-content: flex-start;
-  justify-items: center;
+  align-items: center;
   margin-right: auto;
   flex-grow: 0;
   &__img {

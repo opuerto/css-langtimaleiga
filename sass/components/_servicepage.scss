@@ -1,0 +1,19 @@
+.service__block > div {
+  margin-bottom: 20px;
+  padding: 50px;
+  font-family: $google-font-titles;
+  border-bottom: 1px solid #ccc;
+  & > h1 {
+    font-size: 22px;
+    @include respond(md){
+        font-size: 35px;
+    }
+  }
+
+  & > p {
+    font-size: 16px;
+    @include respond(md){
+      font-size: 20px;
+    }
+  }
+}

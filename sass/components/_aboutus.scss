@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  @include respond(lg) {
+    flex-direction: row;
+  }
+  .content__wrapper{
+    display: flex;
+    font-size: 16px;
+    font-family: $google-font-titles;
+    padding: 50px;
+    @include respond(lg) {
+      margin-right: 40px;
+      font-size: 20px;
+    }
+
+  }
+  .image__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(lg){
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 50px;
+    };
+
+  }
+}

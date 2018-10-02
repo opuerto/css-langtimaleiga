@@ -1,0 +1,146 @@
+.promotion {
+  //height: 500px;
+  font-family: $google-font-titles;
+}
+
+.Promotion__title {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $gray-font;
+
+  h1 {
+    font-size: 18px;
+    @include respond(lg){
+      font-size: 30px;
+    }
+  }
+
+}
+
+.promotion__list {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include respond(lg){
+    flex-direction: row;
+  };
+  .promotion__card {
+    position: relative;
+    &:not(:last-child) {
+
+      margin-bottom: 20px;
+      @include respond(lg) {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+
+    }
+    width: 350px;
+    height: 337px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include respond(sm) {
+      width: 480px;
+      height: 337px;
+    }
+    @include respond(xl){
+      height: 500px;
+      width: 700px;
+    }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      top:0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.4);
+    }
+
+  }
+
+  .card__wrapper {
+    position: relative;
+    height: 100%;
+    padding: 20px;
+    color:white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-align: center;
+        @include respond(lg){
+          font-size: 25px;
+        };
+      }
+    }
+
+    .card__subheading {
+      margin-top: 5px;
+      font-size: 18px;
+    }
+
+    .card__price {
+      margin-top: 8px;
+      font-size: 20px;
+      font-weight: 800;
+      @include respond(lg){
+        font-size: 30px;
+      }
+
+    }
+
+    .card__button {
+
+      a {
+        display: inline-block;
+        margin-top: 30px;
+        background: $second-orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 121px;
+        height: 45px;
+        border-radius: 200px;
+        font-size: 16px;
+        text-transform: uppercase;
+        transition: all .3s;
+        @include respond(lg){
+          width: 130px;
+          height: 50px;
+          font-size: 18px;
+        }
+        &:link, &:hover, &:visited {
+          color:white;
+          text-decoration: none;
+        }
+
+        &:hover {
+            background: $white;
+            color: $second-orange;
+        }
+      }
+
+    }
+  }
+}

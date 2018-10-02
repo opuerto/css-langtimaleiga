@@ -1,4 +1,17 @@
 .footer {
   height: 400px;
   background: #3c3c3b;
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    height: 100%;
+    font-size: 14px;
+    @include respond(sm){
+      font-size: 18px;
+    }
+  }
 }
