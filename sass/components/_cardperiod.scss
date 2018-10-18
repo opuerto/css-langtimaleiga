@@ -7,6 +7,56 @@
   }
 }
 
+.category-content {
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+
+    h1 {
+      font-size: 24px;
+      @include respond(md) {
+        font-size: 34px;
+      }
+    }
+
+    @include respond(md){
+      font-size: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    p {
+      font-size: 14px;
+      @include respond(md) {
+        font-size: 20px;
+      }
+    }
+
+    a {
+      transition: all .2s;
+      &:hover, &:link, &:visited {
+        color:$second-orange;
+        text-decoration: none;
+
+      }
+
+      &:hover {
+        padding: 5px;
+        background: $second-orange;
+        color: white;
+        &::after {
+          content: "→";
+          padding-left: 2px;
+        }
+      }
+
+    }
+}
+
 .card--period {
   position: relative;
   width: 100%;

@@ -39,8 +39,10 @@
             position: relative;
             height: 181px;
             width: 100%;
-            background-size: cover;
+            background-size: contain;
             background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid #ccc;
 
         }
         &__sticker {

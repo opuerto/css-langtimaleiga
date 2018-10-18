@@ -52,6 +52,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
+    font-family: $google-font-titles;
     &:not(:last-child){
         margin-right: 20px;
     }
