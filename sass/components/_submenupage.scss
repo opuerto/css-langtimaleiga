@@ -1,0 +1,62 @@
+.page-submenu {
+  margin-top: 30px;
+  font-family: $google-font-titles;
+  text-transform: uppercase;
+  .submenu__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .submenu-hr {
+         width: 80px;
+         height: 1px;
+         background:#d9534f;
+         margin-bottom: 20px;
+
+      }
+
+      .submenu-hr--bottom {
+          width: 90%;
+          height: 2px;
+          margin-bottom: 0px;
+          margin-top: 20px;
+          @include respond(lg) {
+            width: 992px;
+          }
+      }
+      .submenu__options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include respond(md){
+          flex-direction: row;
+          align-items: flex-start;
+        }
+        .option {
+          &:not(:last-child){
+            margin-bottom: 8px;
+            @include respond(md){
+              margin-bottom: 0;
+              margin-right: 20px;
+            }
+          }
+
+        }
+
+        .option--active {
+            font-weight: 800;
+        }
+        a {
+
+          &:visited, &:link, &:hover {
+              color: inherit;
+              text-decoration: none;
+          }
+
+          &:hover {
+            font-weight: 800;
+          }
+        }
+      }
+  }
+}
